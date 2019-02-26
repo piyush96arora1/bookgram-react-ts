@@ -1,0 +1,69 @@
+{
+    "books": [
+        {
+            "bookId": "1",
+            "bookName": "Attitude is EveryThing",
+            "bookAvatar": "https://images-na.ssl-images-amazon.com/images/I/710jnzKlDTL._AC_UL320_SR204,320_.jpg",
+            "likes": 230,
+            "bookExcerpt": "Book by Joseph Murphy",
+            "review": [
+                "Very nice",
+                "Awseom book"
+            ],
+            "ratings": 2,
+            "author": "Joseph Murphy"
+        },
+        {
+            "bookId": "1",
+            "bookName": "The Monk Who Sold his Ferrari",
+            "bookAvatar": "https://images-na.ssl-images-amazon.com/images/I/61wkAzD8geL._AC_UL320_SR208,320_.jpg",
+            "likes": 230,
+            "bookExcerpt": "Book By Robin Sharma",
+            "review": [
+                "Very nice",
+                "Awseom book"
+            ],
+            "ratings": 2,
+            "author": "Robin Sharma"
+        },
+        {
+            "bookId": "1",
+            "bookName": "How To Stop Worryin and Start Living",
+            "bookAvatar": "https://images-na.ssl-images-amazon.com/images/I/61O9uqUfQDL._AC_UL320_SR204,320_.jpg",
+            "likes": 230,
+            "bookExcerpt": "A book by Dale Carniege",
+            "review": [
+                "Very nice",
+                "Awseom book"
+            ],
+            "ratings": 2,
+            "author": "Dale Carneige"
+        },
+        {
+            "bookId": "1",
+            "bookName": "Rich Dad Poor Dad",
+            "bookAvatar": "https://images-na.ssl-images-amazon.com/images/I/91cBBjTizmL._AC_UL320_SR214,320_.jpg",
+            "likes": 230,
+            "bookExcerpt": "A book by Robert T. Kiyosaki",
+            "review": [
+                "Very nice",
+                "Awseom book"
+            ],
+            "ratings": 2,
+            "author": "Robert T. Kiyosaki"
+        },
+        {
+            "bookId": "1",
+            "bookName": "Attitude is Everything",
+            "bookAvatar": "https://images-na.ssl-images-amazon.com/images/I/710jnzKlDTL._AC_UL320_SR204,320_.jpg",
+            "likes": 230,
+            "bookExcerpt": "A book by Jeff Keller",
+            "review": [
+                "Very nice",
+                "Awseom book"
+            ],
+            "ratings": 2,
+            "author": "Jeff Keller"
+        }
+    ]
+}

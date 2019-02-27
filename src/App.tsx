@@ -1,16 +1,18 @@
 import * as React from 'react';
 import './App.css';
-import {IBook} from './Models/Ibook'
+import { IBook } from './Models/Ibook'
+import BookListProvider from './Components/BookListProvider'
 class App extends React.Component {
   public render() {
-    const books:IBook=require('./Data/Book.json')[0]
+    const books: IBook[] = require('./Data/Book.json').books
     // tslint:disable-next-line:no-console
-    console.log("hi"+books.author)
+    // console.log("hi"+books.author)
     return (
       <div className="App">
-        <header className="App-header"/>
+        <header className="App-header" />
         <p>hi</p>
-      
+        <BookListProvider bookData={books} />
+
       </div>
     );
   }

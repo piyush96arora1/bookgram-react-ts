@@ -1,5 +1,5 @@
 {
-  "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
+  "extends": ["tslint:recommended", "tslint-config-airbnb","tslint-config-prettier"],
   "linterOptions": {
     "exclude": [
       "config/**/*.js",
@@ -7,9 +7,27 @@
       "coverage/lcov-report/*.js"
     ]
   },
+  "paths": {
+    "@material-ui/core": ["./material-ui/src"],
+    "@material-ui/core/*": ["./material-ui/src/*"],
+    "@material-ui/lab": ["./material-ui-lab/src"],
+    "@material-ui/lab/*": ["./material-ui-lab/src/*"]
+  },
   
     "rules": {
-        "no-console": false
-    }
+        "no-console": false,
+        "import-name": false,
+        "variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case"],
+        "no-submodule-imports": [true, "@material-ui"],
+        "ordered-imports": [false]
+    },
+    "forceConsistentCasingInFileNames": true,
+    "experimentalDecorators": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": false,
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true
 
 }

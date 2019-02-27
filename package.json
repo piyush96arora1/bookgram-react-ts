@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "~3.9.2",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-scripts-ts": "3.1.0"
@@ -18,6 +19,11 @@
     "@types/node": "^11.9.5",
     "@types/react": "^16.8.5",
     "@types/react-dom": "^16.8.2",
-    "typescript": "^3.3.3333"
+    "typescript": "^3.3.3333",
+    "tslint-config-airbnb": "5.9.2",
+    "tslint-config-prettier": "1.13.0",
+    "tslint-react": "3.5.1",
+    "tslint": "5.9.1",
+    "ts-loader": "3.5.0"
   }
 }

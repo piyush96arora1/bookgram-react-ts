@@ -28,6 +28,8 @@
     "noImplicitAny": false,
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true
+    "noUnusedLocals": true,
+    "prefer-const": false,
+    "comment-format": [false]
 
 }

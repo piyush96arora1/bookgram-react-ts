@@ -1,22 +1,22 @@
 import * as React from 'react'
 import { IBook } from '../Models/Ibook'
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
+import DialogViewer from './Dialog'
+import './booklist.css'
+import Button from '@material-ui/core/Button';
 interface IBookProps {
     bookData: IBook[]
 }
 interface IbookState {
-    bookData: IBook[]
+    bookData: IBook[];
+    showDialog: boolean
 }
-const styles={card:{minWidth:275,height:150}}
+// const styles={card:{minWidth:275,height:150}}
 class BookListProvider extends React.Component<IBookProps, IbookState>{
     public state: IbookState;
     public props: IBookProps
     constructor(props: IBookProps) {
         super(props)
-        this.state = { bookData: [] }
+        this.state = { bookData: [], showDialog: true }
 
     }
     public componentWillMount() {
@@ -24,24 +24,34 @@ class BookListProvider extends React.Component<IBookProps, IbookState>{
         const data = this.props.bookData
         this.setState({ bookData: data })
     }
-    public render() {
-        const cards=this.state.bookData.forEach((x)=>{
-             return <Card>
-            <CardActionArea>
-              <CardMedia
-                
-                component="img"
-                image={x.bookAvatar}
-                title={x.bookName}
-              />
-            </CardActionArea>
-            <CardContent>
-                {x.bookExcerpt}
-            </CardContent>
-          </Card>
+    public onRatingClicked = (e: any, y: any) => {
+        const bookArray: IBook[] = this.state.bookData
+        const bookIndex = this.state.bookData.findIndex((x => x.bookId === y))
+        bookArray[bookIndex].likes += 1
+        this.setState({ bookData: bookArray })
 
-        })
-        return (<div> {cards}</div>)
+    };
+    public showDialogBox = (book: IBook) => {
+        this.setState({ showDialog: !this.state.showDialog })
+        return (<DialogViewer bookData={book} openDialog={true}></DialogViewer>)
+    }
+    public render() {
+        const cards = this.state.bookData.map((x) =>
+            <div className="card">
+                <img src={x.bookAvatar} />
+                <div className="card-content">
+                    <span>{x.author}</span>
+                    <p>{x.bookName}</p>
+                    <span onClick={(e) => this.onRatingClicked(e, x.bookId)}>{x.likes}</span>
+                    <Button onClick={()=>{this.showDialogBox(x)}}>Open</Button>
+                </div>
+            </div>
+        )
+        return (<React.Fragment>
+           
+            <div className="wrapper">{cards}</div>
+
+        </React.Fragment>)
     }
 }
 

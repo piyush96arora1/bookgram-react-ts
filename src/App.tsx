@@ -9,8 +9,7 @@ class App extends React.Component {
     // console.log("hi"+books.author)
     return (
       <div className="App">
-        <header className="App-header" />
-        <p>hi</p>
+        <header className="App-header">Books</header>
         <BookListProvider bookData={books} />
 
       </div>

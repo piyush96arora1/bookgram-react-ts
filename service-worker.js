@@ -11,11 +11,11 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("/piyush96arora1.github.io/bookgram-react-ts/workbox-v3.6.3/workbox-sw.js");
-workbox.setConfig({modulePathPrefix: "/piyush96arora1.github.io/bookgram-react-ts/workbox-v3.6.3"});
+importScripts("/bookgram-react-ts/workbox-v3.6.3/workbox-sw.js");
+workbox.setConfig({modulePathPrefix: "/bookgram-react-ts/workbox-v3.6.3"});
 
 importScripts(
-  "/piyush96arora1.github.io/bookgram-react-ts/precache-manifest.2f0d7a7027540e02be758814cf0bed91.js"
+  "/bookgram-react-ts/precache-manifest.4b83584a3ae30dd6ea7f13b8df4e67f9.js"
 );
 
 workbox.clientsClaim();
@@ -29,7 +29,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/piyush96arora1.github.io/bookgram-react-ts/index.html", {
+workbox.routing.registerNavigationRoute("/bookgram-react-ts/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });

@@ -8,6 +8,7 @@ interface IBookProps {
 }
 interface IbookState {
     bookData: IBook[];
+    book:IBook|null;
     showDialog: boolean
 }
 // const styles={card:{minWidth:275,height:150}}
@@ -16,7 +17,7 @@ class BookListProvider extends React.Component<IBookProps, IbookState>{
     public props: IBookProps
     constructor(props: IBookProps) {
         super(props)
-        this.state = { bookData: [], showDialog: true }
+        this.state = { bookData: [], showDialog: false,book:null}
 
     }
     public componentWillMount() {
@@ -31,9 +32,10 @@ class BookListProvider extends React.Component<IBookProps, IbookState>{
         this.setState({ bookData: bookArray })
 
     };
-    public showDialogBox = (book: IBook) => {
-        this.setState({ showDialog: !this.state.showDialog })
-        return (<DialogViewer bookData={book} openDialog={true}></DialogViewer>)
+    public showDialogBox = (books: IBook) => {
+        this.setState({ showDialog: true,book:books })
+    
+      //  return ()
     }
     public render() {
         const cards = this.state.bookData.map((x) =>
@@ -48,7 +50,7 @@ class BookListProvider extends React.Component<IBookProps, IbookState>{
             </div>
         )
         return (<React.Fragment>
-           
+         {this.state.book && this.state.showDialog && <DialogViewer bookData={this.state.book} openDialog={true}></DialogViewer>}
             <div className="wrapper">{cards}</div>
 
         </React.Fragment>)

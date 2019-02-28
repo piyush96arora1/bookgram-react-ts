@@ -1,6 +1,13 @@
 {
-  "main.css": "static/css/main.e6d1fc86.css",
-  "main.css.map": "static/css/main.e6d1fc86.css.map",
-  "main.js": "static/js/main.220e9294.js",
-  "main.js.map": "static/js/main.220e9294.js.map"
+  "main.css": "/piyush96arora1.github.io/bookgram-react-ts/static/css/main.b94630f7.chunk.css",
+  "main.js": "/piyush96arora1.github.io/bookgram-react-ts/static/js/main.b7859213.chunk.js",
+  "main.js.map": "/piyush96arora1.github.io/bookgram-react-ts/static/js/main.b7859213.chunk.js.map",
+  "static/js/1.f99526a5.chunk.js": "/piyush96arora1.github.io/bookgram-react-ts/static/js/1.f99526a5.chunk.js",
+  "static/js/1.f99526a5.chunk.js.map": "/piyush96arora1.github.io/bookgram-react-ts/static/js/1.f99526a5.chunk.js.map",
+  "runtime~main.js": "/piyush96arora1.github.io/bookgram-react-ts/static/js/runtime~main.bac4d473.js",
+  "runtime~main.js.map": "/piyush96arora1.github.io/bookgram-react-ts/static/js/runtime~main.bac4d473.js.map",
+  "static/css/main.b94630f7.chunk.css.map": "/piyush96arora1.github.io/bookgram-react-ts/static/css/main.b94630f7.chunk.css.map",
+  "index.html": "/piyush96arora1.github.io/bookgram-react-ts/index.html",
+  "precache-manifest.2f0d7a7027540e02be758814cf0bed91.js": "/piyush96arora1.github.io/bookgram-react-ts/precache-manifest.2f0d7a7027540e02be758814cf0bed91.js",
+  "service-worker.js": "/piyush96arora1.github.io/bookgram-react-ts/service-worker.js"
 }

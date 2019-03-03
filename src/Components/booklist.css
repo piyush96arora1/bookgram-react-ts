@@ -11,3 +11,8 @@
 .card-content{
     padding: 0.4rem
 }
+.image_render{
+    background-color: grey;
+   height: 210px;
+   width:300px;
+}

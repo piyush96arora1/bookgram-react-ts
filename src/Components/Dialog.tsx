@@ -27,6 +27,7 @@ const DialogViewer = (props: IDialogProps) => {
         const bookModified:IBook={...props.bookData,author}
         book=bookModified;
     }
+   
     return (
         <Dialog open={props.openDialog}    disableEscapeKeyDown
          onClose={()=>{props.onSave(book)}}>
@@ -40,6 +41,10 @@ const DialogViewer = (props: IDialogProps) => {
                 <div className="flex layout-column layout-padding">
                 <DialogContentText>{props.bookData.bookExcerpt}</DialogContentText>
                 <TextField type="text" onChange={e=>handleAuthorChange(e)} defaultValue={props.bookData.author}  />
+                Comments:
+                {props.bookData.review.map((x)=>
+                    <p>{x}</p>
+                )}
                 </div>
                 </div>
                 <DialogActions>

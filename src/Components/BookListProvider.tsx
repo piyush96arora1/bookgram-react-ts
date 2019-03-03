@@ -4,13 +4,15 @@ import DialogViewer from './Dialog'
 import './booklist.css'
 import Button from '@material-ui/core/Button';
 import Delete from '@material-ui/icons/Delete'
+import DialogUploader from './DialogUploader'
 interface IBookProps {
     bookData: IBook[]
 }
 interface IbookState {
     bookData: IBook[];
     book:IBook|null;
-    showDialog: boolean
+    showDialog: boolean;
+    showUploader:boolean;
 }
 // const styles={card:{minWidth:275,height:150}}
 class BookListProvider extends React.Component<IBookProps, IbookState>{
@@ -18,13 +20,16 @@ class BookListProvider extends React.Component<IBookProps, IbookState>{
     public props: IBookProps
     constructor(props: IBookProps) {
         super(props)
-        this.state = { bookData: [], showDialog: false,book:null}
+        this.state = { bookData: [], showDialog: false,book:null,showUploader:false}
 
     }
     public componentDidMount() {
 
         const data = this.props.bookData
         this.setState({ bookData: data })
+    }
+    public dialogOpner=()=>{
+        this.setState({showUploader:true})
     }
     public onRatingClicked = (e: any, y: any) => {
         const bookArray: IBook[] = this.state.bookData
@@ -33,6 +38,17 @@ class BookListProvider extends React.Component<IBookProps, IbookState>{
         this.setState({ bookData: bookArray })
 
     };
+    public onDialogUploaderClose=(book:IBook)=>{
+        if(book.bookId!==0){
+        const prevState=this.state.bookData;
+        prevState.push(book);
+        this.setState({bookData:prevState,showUploader:false})
+    
+    }
+else{
+this.setState({showUploader:false})}
+}
+
     public showDialogBox = (books: IBook) => {
         this.setState({ showDialog: true,book:books})
     
@@ -68,7 +84,8 @@ class BookListProvider extends React.Component<IBookProps, IbookState>{
         return (<React.Fragment>
          {this.state.book && this.state.showDialog && <DialogViewer onSave={this.onSave} bookData={this.state.book} openDialog={true}></DialogViewer>}
             <div className="wrapper">{cards}</div>
-        
+            <Button onClick={this.dialogOpner}>Add new Book Details</Button>
+           {this.state.showUploader &&<DialogUploader showUploader={true} onDialogUploaderClose={this.onDialogUploaderClose}></DialogUploader>}
         </React.Fragment>)
     }
 }

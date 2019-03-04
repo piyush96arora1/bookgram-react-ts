@@ -7,7 +7,7 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Button from '@material-ui/core/Button';
  import TextField from '@material-ui/core/TextField';
-
+ import Paper from '@material-ui/core/Paper';
 
 interface IDialogProps {
     bookData: IBook
@@ -34,16 +34,15 @@ const DialogViewer = (props: IDialogProps) => {
 
             <DialogTitle>{props.bookData.bookName}</DialogTitle>
             <DialogContent>
-                <div className="layout-row layout-align-space-between-stretch">
-                <div className="flex">
+                <div className="layout-row layout-sm-column">
+                <div className="flex-60">
                     <img src={props.bookData.bookAvatar}/>
                 </div>
-                <div className="flex layout-column layout-padding">
+                <div className="flex-40 layout-column layout-margin layout-padding  ">
                 <DialogContentText>{props.bookData.bookExcerpt}</DialogContentText>
                 <TextField type="text" onChange={e=>handleAuthorChange(e)} defaultValue={props.bookData.author}  />
-                Comments:
                 {props.bookData.review.map((x)=>
-                    <p>{x}</p>
+                    <Paper style={{borderColor:'black',borderWidth:1,borderStyle:'dotted'}}>{x}</Paper>
                 )}
                 </div>
                 </div>

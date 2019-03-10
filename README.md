@@ -13,3 +13,9 @@ Command to test:-
 TEST: npm run test
 
 This project is live on following URL:- https://piyush96arora1.github.io/bookgram-react-ts/
+        
+        
+                                        Some screen shots:
+                                        
+                                        
+ ![alt text](https://github.com/piyush96arora1/bookgram-react-ts/blob/master/public/Capture.PNG)

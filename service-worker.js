@@ -15,7 +15,7 @@ importScripts("/bookgram-react-ts/workbox-v3.6.3/workbox-sw.js");
 workbox.setConfig({modulePathPrefix: "/bookgram-react-ts/workbox-v3.6.3"});
 
 importScripts(
-  "/bookgram-react-ts/precache-manifest.2c8e6f5409229cfd09ddcc81a89a292d.js"
+  "/bookgram-react-ts/precache-manifest.def1fc2ee2c911a692f7d354ed42d6b2.js"
 );
 
 workbox.clientsClaim();

@@ -73,7 +73,7 @@ class BookListProvider extends React.Component<IBookProps, IbookState>{
     public render() {
         const cards = this.state.bookData.map((x) =>
 
-            <div className="">
+            <div className="" key={x.bookId}>
                 <img src={x.bookAvatar} />
                 <div className="card-content">
                     <span>{x.author} {x.likes}</span>

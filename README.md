@@ -19,3 +19,6 @@ This project is live on following URL:- https://piyush96arora1.github.io/bookgra
                                         
                                         
  ![alt text](https://github.com/piyush96arora1/bookgram-react-ts/blob/master/public/Capture.PNG)
+ 
+ 
+  ![alt text](https://github.com/piyush96arora1/bookgram-react-ts/blob/master/public/Capture1.PNG)

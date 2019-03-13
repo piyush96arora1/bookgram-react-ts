@@ -34,7 +34,7 @@ const DialogViewer = (props: IDialogProps) => {
 
             <DialogTitle>{props.bookData.bookName}</DialogTitle>
             <DialogContent>
-                <div className="layout-row layout-sm-column">
+                <div className="layout-row layout-sm-column layout-xs-column">
                 <div className="flex-60">
                     <img src={props.bookData.bookAvatar}/>
                 </div>

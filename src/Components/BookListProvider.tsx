@@ -73,23 +73,28 @@ class BookListProvider extends React.Component<IBookProps, IbookState>{
     public render() {
         const cards = this.state.bookData.map((x) =>
 
-            <div className="" key={x.bookId}>
-                <img src={x.bookAvatar} />
-                <div className="card-content">
+            <div key={x.bookId}>
+            <div>
+                <img  className="image_render1" src={x.bookAvatar} />
+                </div>
+               
+                    <div className="layout-column">
+                    <div className="flex">
                     <span>{x.author} {x.likes}</span>
-                    <p>{x.bookName}</p>
-                    <div className="layout-row">
+                    <p>{x.bookName}</p></div>
+                    <div className="layout-row flex layout-align-space-between-center">
                         <Button onClick={(e) => this.onRatingClicked(e, x.bookId)}> <Favorite /> </Button>
                         <Button onClick={() => { this.showDialogBox(x) }}>Open</Button>
                         <Button onClick={() => { this.deleteBook(x.bookId) }}>  <Delete /></Button>
                     </div>
-                </div>
+                    </div>
+               
             </div>
 
         )
         return (<React.Fragment>
             {this.state.book && this.state.showDialog && <DialogViewer onSave={this.onSave} bookData={this.state.book} openDialog={true}></DialogViewer>}
-            <div className="wrapper layout-row layout-row layout-align-space-around-center">{cards}</div>
+            <div className=" layout-row layout-wrap layout-fill layout-margin layout-padding ng-scope layout-row layout-align-space-around-center">{cards}</div>
             <Button onClick={this.dialogOpner}>Add new Book Details</Button>
             {this.state.showUploader && <DialogUploader showUploader={true} onDialogUploaderClose={this.onDialogUploaderClose}></DialogUploader>}
         </React.Fragment>)

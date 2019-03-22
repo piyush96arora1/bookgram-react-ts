@@ -8,6 +8,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import Button from '@material-ui/core/Button';
  import TextField from '@material-ui/core/TextField';
  import Paper from '@material-ui/core/Paper';
+ import './booklist.css'
 
 interface IDialogProps {
     bookData: IBook
@@ -36,7 +37,7 @@ const DialogViewer = (props: IDialogProps) => {
             <DialogContent>
                 <div className="layout-row layout-sm-column layout-xs-column">
                 <div className="flex-60">
-                    <img src={props.bookData.bookAvatar}/>
+                    <img className="image_render1"src={props.bookData.bookAvatar}/>
                 </div>
                 <div className="flex-40 layout-column layout-margin layout-padding  ">
                 <DialogContentText>{props.bookData.bookExcerpt}</DialogContentText>
